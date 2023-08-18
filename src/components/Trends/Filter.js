@@ -13,7 +13,9 @@ function Filter() {
   }, [id]);
   const getDatas = async () => {
     await axios
-      .get("http://127.0.0.1:8000/trend/ ")
+      .get(
+        "https://port-0-back-deploy-eu1k2lllfhbb3w.sel3.cloudtype.app/trend/ "
+      )
       .then((response) => {
         setDatas(response.data);
         console.log("성공");

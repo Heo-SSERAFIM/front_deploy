@@ -54,7 +54,7 @@ function List() {
   const getDatas = async () => {
     try {
       const response = await axios.get(
-        `http://127.0.0.1:8000/search/?search=${keyword}`
+        `https://port-0-back-deploy-eu1k2lllfhbb3w.sel3.cloudtype.app/search/?search=${keyword}`
       );
       setDatas(response.data);
     } catch (error) {
@@ -64,7 +64,9 @@ function List() {
 
   const getVerify = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/search/");
+      const response = await axios.get(
+        "https://port-0-back-deploy-eu1k2lllfhbb3w.sel3.cloudtype.app/search/"
+      );
       setVerifys(response.data);
     } catch (error) {
       console.log("verify 실패", error.message);

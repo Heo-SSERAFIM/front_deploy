@@ -132,9 +132,12 @@ const SatisfactionSlider = () => {
     console.log(feedbackText);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/feedback/", {
-        feedback: feedbackText,
-      });
+      const response = await axios.post(
+        "https://port-0-back-deploy-eu1k2lllfhbb3w.sel3.cloudtype.app/feedback/",
+        {
+          feedback: feedbackText,
+        }
+      );
 
       console.log(response.data);
 

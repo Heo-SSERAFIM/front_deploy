@@ -24,7 +24,9 @@ function ReportRank() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/upload/")
+      .get(
+        "https://port-0-back-deploy-eu1k2lllfhbb3w.sel3.cloudtype.app/upload/"
+      )
       .then((response) => {
         // 상위 3개만 저장
         setTopReports(response.data.top_targets.slice(0, 3));

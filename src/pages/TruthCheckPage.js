@@ -21,7 +21,7 @@ function TruthCheckPage() {
         try {
           const jsonData = JSON.stringify({ youtube_url: youtubeUrl });
           const response = await axios.post(
-            "http://127.0.0.1:8000/verify/",
+            "https://port-0-back-deploy-eu1k2lllfhbb3w.sel3.cloudtype.app/verify/",
             jsonData,
             {
               headers: {

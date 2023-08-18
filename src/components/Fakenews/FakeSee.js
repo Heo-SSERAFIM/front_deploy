@@ -19,7 +19,9 @@ function FakeForm() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/upload/${id}`)
+      .get(
+        `https://port-0-back-deploy-eu1k2lllfhbb3w.sel3.cloudtype.app/upload/${id}`
+      )
       .then((response) => {
         setData(response.data);
       })

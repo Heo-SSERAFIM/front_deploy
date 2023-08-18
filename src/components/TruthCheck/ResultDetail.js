@@ -130,7 +130,9 @@ const ResultDetail = () => {
   }, []);
   const getData = async () => {
     await axios
-      .get("http://127.0.0.1:8000/verify/")
+      .get(
+        "https://port-0-back-deploy-eu1k2lllfhbb3w.sel3.cloudtype.app/verify/"
+      )
       .then((response) => {
         setData(response.data[0]); // Assuming the latest data is the first in the list
         console.log(response.data);
@@ -141,7 +143,9 @@ const ResultDetail = () => {
   };
   const getMatch = async () => {
     await axios
-      .get(`http://127.0.0.1:8000/search/${id}`)
+      .get(
+        `https://port-0-back-deploy-eu1k2lllfhbb3w.sel3.cloudtype.app/search/${id}`
+      )
       .then((response) => {
         setMatch(response.data); // Assuming the latest data is the first in the list
         console.log(response.data);
